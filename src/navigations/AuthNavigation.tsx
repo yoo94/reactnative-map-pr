@@ -1,9 +1,10 @@
 import { createStackNavigator } from '@react-navigation/stack';
-import AuthHomeScreen from '../screens/auth/AuthHomeScreen';
-import LoginScreen from '../screens/auth/LoginScreen';
-import SignupScreen from '../screens/auth/SignupScreen';
 import { createStaticNavigation } from '@react-navigation/native';
-import { colors } from '../constant/colors';
+
+import AuthHomeScreen from '@/screens/auth/AuthHomeScreen';
+import SignupScreen from '@/screens/auth/SignupScreen';
+import LoginScreen from '@/screens/auth/LoginScreen';
+import { colors } from '@/constants/colors';
 
 const AuthStack = createStackNavigator({
   screenOptions: {
@@ -14,21 +15,31 @@ const AuthStack = createStackNavigator({
       backgroundColor: colors.WHITE,
       shadowColor: colors.GRAY_500,
     },
-    headerTitleStyle: { fontSize: 16 },
-    cardStyle: { backgroundColor: colors.WHITE },
+    headerTitleStyle: {
+      fontSize: 16,
+    },
+    cardStyle: {
+      backgroundColor: colors.WHITE,
+    },
   },
   screens: {
     AuthHome: {
       screen: AuthHomeScreen,
-      options: { headerShown: false },
+      options: {
+        headerShown: false,
+      },
     },
     Login: {
       screen: LoginScreen,
-      options: { title: '로그인' },
+      options: {
+        title: '로그인',
+      },
     },
     Signup: {
       screen: SignupScreen,
-      options: { title: '회원가입' },
+      options: {
+        title: '회원가입',
+      },
     },
   },
 });

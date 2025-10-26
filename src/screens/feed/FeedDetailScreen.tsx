@@ -1,14 +1,17 @@
+import {StackScreenProps} from '@react-navigation/stack';
 import React from 'react';
-import { StyleSheet } from 'react-native';
-import { Text } from 'react-native-gesture-handler';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import {StyleSheet} from 'react-native';
+import {Text} from 'react-native-gesture-handler';
+import {SafeAreaView} from 'react-native-safe-area-context';
+import {FeedStackParamList} from '@/types/navigation';
 
-interface FeedDetailScreenProps {}
+type Props = StackScreenProps<FeedStackParamList, 'FeedDetail'>;
 
-function FeedDetailScreen({}: FeedDetailScreenProps) {
+function FeedDetailScreen({route}: Props) {
+  const id = route.params.id;
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Feed Detail Screen</Text>
+      <Text>Feed Detail Screen {id}</Text>
     </SafeAreaView>
   );
 }

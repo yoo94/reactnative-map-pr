@@ -1,10 +1,11 @@
 import { createStackNavigator } from '@react-navigation/stack';
-import FeedListScreen from '../screens/feed/FeedListScreen';
-import FeedDetailScreen from '../screens/feed/FeedDetailScreen';
-import FeedFavoriteScreen from '../screens/feed/FeedFavoriteScreen';
-import EditLocationScreen from '../screens/feed/EditLocationScreen';
-import { colors } from '../constant/colors';
-import DrawerButton from '../components/DrawerButton';
+
+import DrawerButton from '@/components/DrawerButton';
+import { colors } from '@/constants/colors';
+import EditLocationScreen from '@/screens/feed/EditLocationScreen';
+import FeedDetailScreen from '@/screens/feed/FeedDetailScreen';
+import FeedFavoriteScreen from '@/screens/feed/FeedFavoriteScreen';
+import FeedListScreen from '@/screens/feed/FeedListScreen';
 
 export const FeedStack = createStackNavigator({
   screenOptions: {
@@ -15,7 +16,12 @@ export const FeedStack = createStackNavigator({
       backgroundColor: colors.WHITE,
       shadowColor: colors.GRAY_500,
     },
-    headerTitleStyle: { fontSize: 16 },
+    headerTitleStyle: {
+      fontSize: 16,
+    },
+    cardStyle: {
+      backgroundColor: colors.WHITE,
+    },
   },
   screens: {
     FeedList: {
@@ -27,7 +33,6 @@ export const FeedStack = createStackNavigator({
     },
     FeedDetail: {
       screen: FeedDetailScreen,
-      options: { title: '피드 상세' },
     },
     FeedFavorite: {
       screen: FeedFavoriteScreen,

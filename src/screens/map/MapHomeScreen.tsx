@@ -1,8 +1,8 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
-import { Text } from 'react-native-gesture-handler';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import DrawerButton from '../../components/DrawerButton';
+import {StyleSheet} from 'react-native';
+import {Text} from 'react-native-gesture-handler';
+import {SafeAreaView} from 'react-native-safe-area-context';
+import DrawerButton from '@/components/DrawerButton';
 
 interface MapHomeScreenProps {}
 

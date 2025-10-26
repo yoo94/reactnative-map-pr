@@ -1,8 +1,9 @@
 import { createStackNavigator } from '@react-navigation/stack';
-import MapHomeScreen from '../screens/map/MapHomeScreen';
-import AddLocationScreen from '../screens/map/AddLocationScreen';
-import SearchLocationScreen from '../screens/map/SearchLocationScreen';
-import { colors } from '../constant/colors';
+
+import AddLocationScreen from '@/screens/map/AddLocationScreen';
+import MapHomeScreen from '@/screens/map/MapHomeScreen';
+import SearchLocationScreen from '@/screens/map/SearchLocationScreen';
+import { colors } from '@/constants/colors';
 
 export const MapStack = createStackNavigator({
   screenOptions: {
@@ -13,12 +14,16 @@ export const MapStack = createStackNavigator({
       backgroundColor: colors.WHITE,
       shadowColor: colors.GRAY_500,
     },
-    headerTitleStyle: { fontSize: 16 },
+    headerTitleStyle: {
+      fontSize: 16,
+    },
   },
   screens: {
     MapHome: {
       screen: MapHomeScreen,
-      options: { headerShown: false },
+      options: {
+        headerShown: false,
+      },
     },
     AddLocation: {
       screen: AddLocationScreen,
