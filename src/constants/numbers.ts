@@ -6,4 +6,4 @@ const numbers = {
   },
 };
 
-export { numbers };
+export {numbers};
